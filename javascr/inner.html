@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Innerhtml</title>
+  </head>
+  <body>
+    <h2>Inner Html</h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic fugiat soluta
+      voluptatum? Alias odio debitis, nam quas eum labore harum quae neque
+      blanditiis, deserunt laudantium aliquid at earum dolor voluptas!
+    </p>
+    <p id="first"></p>
+    <p id="second"></p>
+    <script>
+      type = "text/javascript" > document.write("second content");
+      var name = "lavanya";
+      var name = "nnnnn";
+      //window alert//
+      window.alert("my first alert");
+      //normal alert//
+      alert("first alert");
+      //console//
+      console.log(5 + 6);
+      //print//
+      window.print();
+      //declare variable//
+      var username = "lavanya";
+      let phone = "63837460000";
+      document.getElementById("first").innerHTML = name;
+      document.getElementById("first").innerHTML = username;
+      document.getElementById("second").innerHTML = phone;
+      // var blockscope//
+      var i = 3;
+      if (i > 0) {
+        var mine = "test content";
+      }
+      console.log(mine);
+      //let blockscope//
+      var i = 3;
+      if (i > 0) {
+        let mie = "test content";
+        console.log(mie);
+      }
+      // var hoisted//
+      console.log(test);
+      var test = "jjjjj";
+      //let hoisted//
+      console.log(miee);
+      let miee = "msmmmmm";
+      //const hoisted//
+      console.log(nnn);
+      const nnn = "ooooo";
+    </script>
+  </body>
+</html>

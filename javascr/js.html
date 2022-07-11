@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>javascript string</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <p id="dem"></p>
+    <p id="fruits"></p>
+    <p id="de"></p>
+    <p id="del"></p>
+    <p id="content"></p>
+    <p id="deal">Please visit Microsoft!</p>
+    <p id="concat"></p>
+    <script type="text/javascript">
+      var myname = "bro code";
+      var mystreet = "123 mel street";
+      var mycity = "nowhere xy 12345";
+      var myphone = "123-456-7890";
+
+      console.log(myname.charAt(2));
+
+      var myaddress = mystreet.concat(" ", mycity);
+      console.log(myaddress);
+
+      myphone = myphone.replaceAll("-", "");
+      console.log(myphone);
+
+      //js string properties//
+      let text = "Food";
+      document.getElementById("demo").innerHTML = text.length;
+
+      //js string methods//
+      let shall = "Potato, Tomato, Onion";
+      document.getElementById("dem").innerHTML = shall.slice(7, 13);
+
+      //js string negative value//
+      let sr = "Apple, Banana, Kiwi";
+      document.getElementById("fruits").innerHTML = sr.slice(-12, -6);
+
+      //js part slice//
+      let tr = "Apple, Banana, Kiwi";
+      document.getElementById("de").innerHTML = tr.slice(7);
+
+      //js string substring//
+      let r = "carrot, beetroot, tomato";
+      document.getElementById("del").innerHTML = r.substring(7, 13);
+
+      //js str substring//
+      let fell = "icecream, juice, milkshakes";
+      document.getElementById("content").innerHTML = fell.substr(7);
+
+      //replacing string content//
+      function myFunction() {
+        let text = document.getElementById("deal").innerHTML;
+        document.getElementById("deal").innerHTML = text.replace(
+          "Microsoft",
+          "W3Schools"
+        );
+      }
+
+      //string concatenate//
+      let text1 = "lavan";
+      let text2 = "sri";
+      let text3 = text1.concat(" ", text2);
+      document.getElementById("concat").innerHTML = text3;
+
+      //num to str//
+      let num = 10;
+      console.log(typeof num.toString());
+
+      //search of position//
+      let para = "Biriyani taste was excellent";
+      console.log(para.indexOf("taste"));
+
+      //search//
+      let paras = "Biriyani taste was excellent";
+      console.log(paras.search("excellent"));
+
+      //if condition//
+      let str = "this too shall pass";
+      if (str.search("shall") != -1) {
+        console.log("exists");
+      } else {
+        console.log("not exists");
+      }
+      //substr//
+      let line = "variable characters";
+      let wordslice = "my";
+      let slicedword = line.substr(1, 7);
+      console.log(slicedword);
+
+      //str uppercase//
+      let team = "javascript functions";
+      let slicesword = team.toLocaleUpperCase();
+      console.log(slicesword);
+
+      //str lowercase//
+      let teams = "JAVASCRIPT FUNCTIONS";
+      let sliceeword = teams.toLocaleLowerCase();
+      console.log(sliceeword);
+
+      //padtrim//
+      let str3 = "   sweets  ";
+      console.log(str3.trim());
+
+      let str1 = "  c a m e  ";
+      console.log(str1.trim());
+
+      //split//
+      const msage = "day::off::sun";
+      let result7 = msage.split("::");
+      console.log(result7);
+
+      //padStart//
+      const a = "lavanya";
+      console.log(a.padStart(10, "."));
+
+      //padstartt//
+      const b = "lavanyaa";
+      console.log(b.padStart(20, "."));
+
+      //padend//
+      const c = "lavanyaaa";
+      console.log(c.padEnd(20, "."));
+
+      //replace all//
+      const style = 'firstname="abc" &lastname="pqr"&age=25&location="dpi"';
+      console.log(style.replace(/\&/g, " "));
+      //replace//
+      const styless = "hello lavi";
+      console.log(styless.replaceAll("lavi", "lavan"));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="first"></p>
+    <p id="second"></p>
+    <p id="third"></p>
+    <p id="four"></p>
+    <p id="five"></p>
+    <p id="demo"></p>
+    <p id="dell"></p>
+    <p id="de"></p>
+    <p id="den"></p>
+    <p id="del"></p>
+    <p id="o"></p>
+    <p id="content"></p>
+
+    <p>Replace "Microsoft" with "W3Schools" in the paragraph below:</p>
+    <p id="deal">Please visit Microsoft!</p>
+    <p>Convert string to upper case:</p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <p id="show">Hello World!</p>
+    <p>The concat() method joins two or more strings:</p>
+    <p id="shown"></p>
+
+    <p id="demo"></p>
+
+    <script tye="text/javascript">
+      //operators//
+
+      let a = 5;
+      let b = 6;
+      let output = a + b;
+      document.getElementById("first").innerHTML = output;
+
+      //multiply operators//
+
+      let x = 7;
+      let y = 4;
+      let z = x * y;
+      document.getElementById("second").innerHTML = z;
+
+      //equal operator//
+      let m = 5;
+      let n = 11;
+      //x=x+y//
+      o = m += n;
+      document.getElementById("third").innerHTML = o;
+
+      //string operators//
+
+      let firstname = "lavanya";
+      let lastname = "ganesan";
+      var some = firstname + "" + lastname;
+      document.getElementById("four").innerHTML = some;
+
+      //string with equal operator//
+      let v = 5;
+      let w = 8;
+      let out = x + y;
+      let fname = "lavi";
+      let lname = "ganes";
+      var same = v + w + "" + lname;
+      document.getElementById("five").innerHTML = same;
+
+      //str length//
+      let text = "biriyani";
+      document.getElementById("demo").innerHTML = text.length;
+
+      //str slice//
+      let str = "Biriyani, Friedrice, Naan";
+      document.getElementById("dell").innerHTML = str.slice(7, 13);
+
+      //str negative//
+      let tr = "Potato, tomato, raddish";
+      document.getElementById("de").innerHTML = tr.slice(-12, -6);
+
+      //slice//
+      let r = "Stranger, Relative";
+      document.getElementById("den").innerHTML = r.slice(7);
+
+      //negative slice//
+      let l = "Vennila, Strawberry, Butterscotch";
+      document.getElementById("del").innerHTML = l.slice(-12);
+
+      //str substring//
+      let fruit = "Ice, Cold, mint";
+      document.getElementById("o").innerHTML = fruit.substring(7, 10);
+
+      //substr//
+      let mine = "Tanjore, Chennai";
+      let part = mine.substr(7, 6);
+
+      //substr negative//
+      let tl = "Beach, Mall, Desert";
+      document.getElementById("content").innerHTML = tl.substr(-4);
+
+      //js to uppercase//
+      function myFunction() {
+        let text = document.getElementById("deal").innerHTML;
+        document.getElementById("deal").innerHTML = text.replace(
+          "Microsoft",
+          "W3Schools"
+        );
+      }
+      function myFunction() {
+        let text = document.getElementById("show").innerHTML;
+        document.getElementById("show").innerHTML = text.toUpperCase();
+      }
+      //string concat//
+      let text1 = "Hello";
+      let text2 = "World!";
+      let text3 = text1.concat(" ", text2);
+      document.getElementById("shown").innerHTML = text3;
+      //trim method//
+      let test1 = "  Hello World   ";
+      let test2 = test1.trim();
+      console.log(test2);
+    </script>
+  </body>
+</html>
