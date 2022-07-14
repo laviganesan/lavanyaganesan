@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array functions</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      //constructor function//
+      function Person(name) {
+        this.name = name;
+        this.greeting = function () {
+          console.log("My name is ${this.name}");
+        };
+      }
+      let person = new Person("Lavanya");
+      let x = {};
+      person.greeting();
+
+      //factory function//
+      function createPerson(name) {
+        return {
+          name: name,
+          greeting: function () {
+            let msg = "My name is ${this.name}";
+            console.log(msg);
+          },
+        };
+      }
+      let lavanya = createPerson("lavanya");
+      lavanya.greeting();
+
+      //find function//
+      const items = [
+        { id: 1, item: "Android mobile", cost: 6500 },
+        { id: 2, item: "iphone", cost: 27000 },
+        { id: 3, item: "windows", cost: 8500 },
+      ];
+      let affordable = items.find(function (value) {
+        return value.cost < 10000;
+      });
+      console.log("afordable", affordable);
+
+      //find index//
+      const items1 = [
+        { id: 1, item: "Android mobile", cost: 6500 },
+        { id: 2, item: "iphone", cost: 27000 },
+        { id: 3, item: "windows", cost: 8500 },
+      ];
+      let affordableprice = items1.findIndex(function (value) {
+        return value.cost > 10000;
+      });
+      console.log("affordable", affordableprice);
+
+      //array includes//
+      let z = [20, 30, 50, 12, 45, 24];
+      console.log(z.includes(20));
+
+      //**//
+      console.log(2 ** 4);
+
+      //unshift//
+      let cars = ["bmw", "skoda", "swift"];
+      cars.unshift("fortune");
+      console.log(cars);
+
+      //shift//
+      let car = ["bmw", "skoda", "swift"];
+      car.shift("bmw");
+      console.log(car);
+
+      //push//
+      let color = ["blue", "green", "black"];
+      color.push("pink");
+      console.log(color);
+
+      //pop//
+      let colors = ["blue", "green", "white"];
+      colors.pop("white");
+      console.log(colors);
+
+      //proto//
+      function Object1() {}
+      function Array1() {}
+      Array1.prototype = new Object1();
+      let arr = new Array1();
+      console.log(arr);
+
+      //keys//
+      let obj1 = {
+        name: "abc",
+        age: 25,
+      };
+      console.log(Object.keys(obj1));
+      //iterate//
+      for (let i of Object.keys(obj1)) {
+        console.log(i);
+      }
+
+      //array reverse//
+      let array = ["a", "b", "c", "d"];
+      console.log(array.reverse());
+
+      //sort ascending//
+      const students = [3, 8, 1];
+      students.sort();
+      console.log(students);
+
+      //sort descending//
+      const student = [3, 8, 1];
+      student.sort(function (a, b) {
+        return b - a;
+      });
+      console.log(student);
+      const people = [
+        { id: 3, name: "Sri" },
+        { id: 8, name: "Lavan" },
+        { id: 1, name: "Ramya" },
+      ];
+      people.sort(function (a, b) {
+        //a < b => -1//
+        if (a.name < b.name) return -1;
+        //a > b => 1//
+        if (a.name > b.name) return 1;
+        //a == b =>0//
+        return 0;
+      });
+      console.log(people);
+
+      //map function//
+      const children = [
+        { id: 1, first_name: "lavanya", last_name: "sri" },
+        { id: 2, first_name: "ramya", last_name: "sri" },
+        { id: 3, first_name: "preethi", last_name: "sri" },
+      ];
+      let final = children.map(function (val) {
+        return [val.first_name, val.last_name].join("");
+      });
+      console.log(final);
+
+      //spread operator//
+      const men = ["raja", "ram", "sathish"];
+      const women = ["priya", "saranya", "shoba"];
+      let total = [...men, ...women];
+      console.log(total);
+
+      //forloops//
+      for (let k = 0; k <= 5; k++) {
+        console.log("number #" + k);
+      }
+      //oddnumbers//
+      for (let j = 1; j <= 10; j++) {
+        if (j % 2 !== 0) {
+          console.log("Odd Number #" + j);
+        }
+      }
+      //reverse//
+      for (let i = 10; i >= 1; i--) {
+        if (i % 2 == 0) {
+          console.log("Even Number #" + i);
+        }
+      }
+    </script>
+  </body>
+</html>
