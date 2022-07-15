@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      //for-in//
+      const person = {
+        name: "lavi",
+        age: 23,
+        phone: 72726636373,
+      };
+      for (let key in person) {
+        console.log(key + ":", person[key]);
+      }
+
+      //for-in//
+      const girl = {
+        name: "lavi",
+        age: 23,
+        phone: 72726636373,
+      };
+      for (let key in girl) {
+        console.log("key:", key);
+      }
+
+      //for-in array//
+      let color = ["red", "blue", "pink"];
+      for (let key in color) {
+        console.log(color[key]);
+      }
+      //for-of array//
+      let juices = ["lemon", "orange", "apple"];
+      for (let juice of juices) {
+        console.log("juices:" + color);
+      }
+
+      //fid index//
+      const arr = ["bavi", "priya", "saran", "kavi"];
+      const result = arr.findIndex((value) => value == "saran");
+      console.log(result);
+
+      // if not found the name means it becomes -1//
+      const Array = ["bavi", "priya", "saran", "kavi"];
+      const results = Array.findIndex((value) => value == "sarans");
+      console.log(results);
+
+      //indexof//
+      const members = ["sathya", "ravi", "ram", "shoba", "ravi"];
+      const final = members.indexOf("ravi");
+      console.log(final);
+
+      const men = ["sathish", "suresh", "ramesh", "kalai", "suresh"];
+      const total = men.indexOf("suresh", 0);
+      console.log(total);
+
+      //last indexof//
+      const women = ["kavi", "lavi", "pavi", "san", "lavi"];
+      const womens = women.lastIndexOf("lavi");
+      console.log(womens);
+
+      //if not occur//
+      const colleague = ["kavi", "lavi", "pavi", "san", "lavi"];
+      const colleagues = colleague.lastIndexOf("lavs");
+      console.log(colleagues);
+
+      const cousin = ["kavi", "lavi", "pavi", "san", "lavi"];
+      const cousins = cousin.lastIndexOf("lavi", 3);
+      console.log(cousins);
+
+      //set timeout//
+      setTimeout(
+        function (name) {
+          console.log("content", name);
+        },
+        10000,
+        "lavanya"
+      );
+
+      //set interval//
+      setInterval(
+        function (food) {
+          console.log("test", food);
+        },
+        1000,
+        "biriyani"
+      );
+
+      //callback//
+      function l(num1, num2, callback) {
+        let result = num1 + num2;
+        callback(result);
+      }
+      function showresult(r) {
+        console.log("RESULT=" + r);
+      }
+      l(10, 20, showresult);
+      //callback//
+      function m(obj1, obj2, callback) {
+        let total = obj1 + obj2;
+        callback(total);
+      }
+      function totalobj(t) {
+        console.log("RESULT=" + t);
+      }
+      m(50, 1000, totalobj);
+
+      //callback//
+      const f1 = (val, callback) => {
+        return callback(val + 10);
+      };
+      const callback = (val) => {
+        return val + 20;
+      };
+      console.log(f1(1, callback));
+
+      //promise success//
+      const p1 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve("success");
+        }, 1000);
+      });
+      p1.then(console.log);
+
+      const p2 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          reject("failure");
+        }, 1000);
+      });
+      p2.then(console.log).catch(console.log);
+      //promisechain//
+      const x1 = (val) =>
+        new Promise((resolve, reject) => {
+          setTimeout(() => {
+            resolve(val + 10);
+          }, 1000);
+        });
+
+      x1(1)
+        .then((x) => x + 20)
+        .then(console.log);
+      //all//
+      const p3 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve("success");
+        }, 1000);
+      });
+      p3.then(console.log);
+
+      const p4 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve("success");
+        }, 1000);
+      });
+      p4.then(console.log).catch(console.log);
+      //allsettled//
+      const p5 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve("success");
+        }, 1000);
+      });
+      p5.then(console.log);
+
+      const p6 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          reject("failure");
+        }, 1000);
+      });
+      p6.then(console.log).catch(console.log);
+      //race//
+      const p7 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve("success");
+        }, 1000);
+      });
+
+      const p8 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve("success1");
+        }, 1000);
+      });
+      Promise.race([p7, p8]).then(console.log).catch(console.log);
+
+      let languages = ["Js", "Python", "C", "ruby", "Lua"];
+      for (i = 0; i < languages.length; i++) {
+        console.log(languages[i]);
+      }
+    </script>
+  </body>
+</html>
