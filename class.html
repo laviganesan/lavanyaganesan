@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>class</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      //using a class//
+      class Car {
+        constructor(name, year) {
+          this.name = name;
+          this.year = year;
+        }
+      }
+
+      const myCar = new Car("skoda", 2020);
+      console.log(myCar);
+
+      //constructor class//
+      class Cars {
+        constructor(name, year) {
+          this.name = name;
+          this.year = year;
+        }
+        age() {
+          let date = new Date();
+          return date.getFullYear() - this.year;
+        }
+      }
+
+      let myCars = new Cars("skoda", 2020);
+      console.log(myCars);
+
+      //class,constructor,this//
+      class student {
+        constructor(name, age, roll, mob) {
+          this.name = name;
+          this.age = age;
+          this.roll = roll;
+          this.mob = mob;
+        }
+      }
+      student1 = new student("lavan", 18, 01, 732179283092);
+      student2 = new student("john", 19, 02, 0100277);
+      student3 = new student("kavi", 20, 03, 0100277);
+      console.log(student1.name);
+      console.log(student1.mob);
+      console.log(student2.age);
+      console.log(student2.name);
+      console.log(student3.roll);
+      console.log(student3.mob);
+      //super keyword//
+      class member {
+        constructor(name, age, roll, mob) {
+          this.name = name;
+          this.age = age;
+          this.roll = roll;
+          this.mob = mob;
+        }
+      }
+      class school extends student {
+        constructor(
+          name,
+          student_name,
+          student_age,
+          student_roll,
+          student_mob
+        ) {
+          super(student_name, student_age, student_roll, student_mob);
+          this.school_name;
+        }
+        print() {
+          return this.name + "studies in" + this.school_name;
+        }
+      }
+      school1 = new school("bharath", "lavan", 20, 01, -082307932);
+      school2 = new school("bcr", "jaya", 18, 02, 9821307932);
+      console.log(school1.print());
+      console.log(school2.print());
+
+      //settimeout//
+      setTimeout(
+        function (name) {
+          console.log("text", "name");
+        },
+        2000,
+        "lavi"
+      );
+      //setinterval//
+      setInterval(
+        function () {
+          console.log("test", "lavanyaa");
+        },
+        3000,
+        "lavanyaa"
+      );
+
+      setInterval(
+        function () {
+          console.log(new Date());
+        },
+        1000,
+        "lavanya"
+      );
+
+      let count = 0;
+      const intervalId = setInterval(function () {
+        count++;
+        if (count > 10) {
+          clearInterval(intervalId);
+        }
+        console.log(intervalId);
+      }, 1000);
+    </script>
+  </body>
+</html>
