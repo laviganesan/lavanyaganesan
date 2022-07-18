@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>constructor</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      //conditional if-else statements//
+      let isAmerica = "true";
+      let isIreland = "false";
+
+      if (isAmerica || isIreland) {
+        console.log("continent world");
+      } else {
+        console.log("not a continent world");
+      }
+      //if hour is betwn 12AM to 1PM -> Good morning
+      //else if hour is between 1pm to 5pm->Good Afternoon
+      //else hour is betwn 5pm to 12 am -> Good evening
+      let hour = 23;
+      if (hour >= 0 && hour <= 13) {
+        console.log("Good Morning");
+      } else if (hour >= 13 && hour <= 17) {
+        console.log("Good Afternoon");
+      } else {
+        console.log("good evening");
+      }
+
+      //date//
+      let date = new Date();
+      console.log(date.getHours());
+
+      //indexof//
+      const arr = ["lavan", "pavi", "saranya", "jaya"];
+      const result = arr.findIndex((element) => element === "pavi");
+      console.log(result);
+      const results = arr.findIndex((element) => element === "pavis");
+      console.log(results);
+
+      //indexof it defines the first value out of same name//
+      const array = ["john", "kevin", "kel", "kumar", "kevin"];
+      const total = array.indexOf("kevin", 1);
+      console.log(total);
+
+      //lastindexof//
+      const members = ["winter", "summer", "summer", "spring", "monsoon"];
+      const season = members.lastIndexOf("summer");
+      console.log(season, 3);
+    </script>
+  </body>
+</html>
