@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>switch</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      //switch condition//
+      let grade = "o";
+      switch (grade) {
+        case "s":
+          console.log("supergrade");
+          break;
+        case "o":
+          console.log("excellent grade");
+          break;
+        case "A":
+          console.log("average");
+          break;
+        case "E":
+          console.log("just pass");
+          break;
+        case "U":
+          console.log("fail");
+          break;
+        default:
+          console.log("unknown grade");
+      }
+
+      //conditional statements//
+      let hour = 23;
+      if (hour >= 0 && hour <= 13) {
+        console.log("Good Morning");
+      } else if (hour >= 13 && hour <= 17) {
+        console.log("Good Aternoon");
+      } else {
+        console.log("Good evening");
+      }
+      let date = new Date();
+      console.log(date);
+      console.log(date.getHours());
+      console.log(date.getMilliseconds());
+      console.log(date.getMinutes());
+
+      //bitwise operator//
+      const readPermission = 4;
+      const writePermission = 2;
+      const executePermission = 1;
+      let myPermission = 0;
+      myPermission = myPermission | readPermission | writePermission;
+      let message = myPermission & readPermission ? "yes" : "no";
+      console.log(message);
+
+      //ternary operator//
+      let age = 24;
+      let type = age > 18 ? "Adult ticket" : "child ticket";
+      console.log(type);
+
+      let name = "lavanya";
+      const ages = 23;
+      const interest = ["creating, teaching new things."];
+      let address = {
+        city: "chennai",
+        state: "tamilnadu",
+      };
+      function greeting() {
+        let msg = `My name is ${name}, i love ${interest}`;
+        console.log(msg);
+      }
+      greeting();
+
+      //object-oriented programming//
+      let person = {
+        name: "ramya",
+        age: 25,
+        interest: ["playing", "reading books"],
+        isAlive: true,
+        address: {
+          city: "coimbatore",
+          state: "tamilnadu",
+        },
+        greeting: function () {
+          let msg = `My Name is ${this.name}, i love ${this.interest}`;
+          console.log(msg);
+        },
+      };
+      person.greeting();
+
+      //settimeout//
+      setTimeout(
+        function (name) {
+          console.log("text", "lavanya");
+        },
+        1000,
+        "lavanya"
+      );
+      let count = 0;
+      const IntervalId = setInterval(
+        function (name) {
+          count++;
+          if (count > 10) {
+            clearInterval(IntervalId);
+          }
+          console.log(count);
+        },
+        1000,
+        "lavi"
+      );
+
+      //classes//
+      class student {
+        constructor(name, age, rollno, mobileno) {
+          this.name = name;
+          this.age = age;
+          this.rollno = rollno;
+          this.mobileno = mobileno;
+        }
+      }
+      student1 = new student("lavanya", 20, 01, 9038073);
+      student2 = new student("kavi", 18, 02, 9038073);
+      student3 = new student("kavyaa", 20, 03, 9038070193);
+      console.log(student1.name);
+      console.log(student2.rollno);
+      console.log(student3.mobileno);
+      class students {
+        constructor(name, age, roll, mob) {
+          this.name = name;
+          this.age = age;
+          this.rollno = rollno;
+          this.mobileno = mobileno;
+        }
+      }
+      //callback
+      function f(num1, num2, callback) {
+        let result = num1 + num2;
+        callback(result);
+      }
+      function showresult(r) {
+        console.log("RESULT=" + r);
+      }
+      f(10, 20, showresult);
+
+      //example1//
+      function f(name1, name2, callback) {
+        let total = name1 + name2;
+        callback(total);
+      }
+      function totalresult(t) {
+        console.log("NAME=" + t);
+      }
+      f("lavanya", "kavitha", totalresult);
+
+      //max//
+      const numbers = [90, 80, 70, 60, 50];
+      let max = Math.max.apply(null, numbers);
+
+      console.log(max);
+
+      //min//
+      const number = [10, 20, 30, 40, 50, 60];
+      let min = Math.min.apply(null, number);
+      console.log(min);
+
+      //constructor//
+      function Person(name) {
+        this.name = name;
+        this.greeting = function () {
+          console.log(`My name is ${this.name}`);
+        };
+      }
+      let persons = new Person("lavanya");
+      persons.greeting();
+    </script>
+  </body>
+</html>
